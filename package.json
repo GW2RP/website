@@ -28,5 +28,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node ./scripts/commit-msg.js $HUSKY_GIT_PARAMS && commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
